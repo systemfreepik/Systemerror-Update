@@ -65,8 +65,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+PRRzqHd31XY3ZWZk")
+    buttons.buildbutton("Main Channel", "https://t.me/SystemErrorBD")
+    buttons.buildbutton("Chat Group", "https://t.me/systemerrorbdchat")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -75,7 +75,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('Not Authorized user, Contact With @MR_ERR0RR', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -170,7 +170,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Mirror-Leech-Bot Help',
+        title='BOT Help CMD',
         content=help_string_telegraph,
     )["path"]
 
@@ -198,7 +198,7 @@ help_string = f'''
 
 def bot_help(update, context):
     button = ButtonMaker()
-    button.buildbutton("Other Commands", f"https://telegra.ph/{help}")
+    button.buildbutton("Other Commands", f"https://telegra.ph/Bot-Command-03-15")
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update.message, reply_markup)
 
